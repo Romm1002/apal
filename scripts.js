@@ -3,7 +3,6 @@
 var sommes = [0.01, 0.20, 0.50, 1, 5, 10, 20, 50, 100, 250, 500, 1000, 5000, 10000, 15000, 20000, 25000, 50000, 75000, 100000, 250000, 500000];
 
 
-
 // Randomisation du tableau des sommes.
 
 function randomiserTableau(inputArray)
