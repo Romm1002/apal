@@ -6,178 +6,220 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous">
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../css/style.css">
         <title>Jeu - À Prendre ou à Laisser</title>
-        <link rel="icon" href="banniere.png">
+        <link rel="icon" href="../img/banniere.png">
     </head>
-    <body>
 
-        <div id="commencerPartie">
-            <p id="commencerPartiePara1">Bienvenue sur le jeu À Prendre ou à Laisser !</p>
-            <p id="commencerPartiePara2">Entre ton prénom et clique sur "Démarrer" pour commencer la partie</p>
-            <input id="prenom" type="text" placeholder="Prénom">
-            <p id="prblmPrenom" style="display: none;"></p>
-            <div id="buttonCommencerPartie">
-                <button id="commencerPartieButton1" type="submit" onclick="demarrageJeu()">Démarrer</button>
+    <body>
+        <div class="startGame" id="startGame">
+            <div class="startGame-header">
+                <h1>À Prendre ou à Laisser</h1>
+            </div>
+            <div class="startGame-content">
+                <p>Entrez votre prénom et cliquez sur "Démarrer" pour commencer la partie</p>
+                <input type="text" id="prenom" placeholder="Prénom" required>
+                <button type="button" onclick="demarrageJeu()">Démarrer</button>
+            </div>
+            <div class="startGame-footer">
+                <p>Designed by Romain</p>
+            </div>
+        </div>
+
+        <div class="game" id="game">
+            <div class="game-header">
+                <h3>Votre boîte</h3>
+                <img src="../img/boite.png" id="boiteDuJoueur" alt="Boîte du joueur" width="70">
+            </div>
+            <div class="game-content">
+                <div class="game-content-row">
+                    <div class="row-boite">
+                        <h6>Boîte 1</h6>
+                        <img src="../img/boite.png" id="boite1" alt="Boîte" width="50" onclick="ouvertureBoite1()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp1" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para1"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 2</h6>
+                        <img src="../img/boite.png" id="boite2" alt="Boîte" width="50" onclick="ouvertureBoite2()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp2" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para2"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 3</h6>
+                        <img src="../img/boite.png" id="boite3" alt="Boîte" width="50" onclick="ouvertureBoite3()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp3" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para3"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 4</h6>
+                        <img src="../img/boite.png" id="boite4" alt="Boîte" width="50" onclick="ouvertureBoite4()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp4" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para4"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 5</h6>
+                        <img src="../img/boite.png" id="boite5" alt="Boîte" width="50" onclick="ouvertureBoite5()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp5" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para5"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 6</h6>
+                        <img src="../img/boite.png" id="boite6" alt="Boîte" width="50" onclick="ouvertureBoite6()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp6" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para6"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 7</h6>
+                        <img src="../img/boite.png" id="boite7" alt="Boîte" width="50" onclick="ouvertureBoite7()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp7" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para7"></p>
+                    </div>
+                </div>
+                <div class="game-content-row">
+                    <div class="row-boite">
+                        <h6>Boîte 8</h6>
+                        <img src="../img/boite.png" id="boite8" alt="Boîte" width="50" onclick="ouvertureBoite8()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp8" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para8"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 9</h6>
+                        <img src="../img/boite.png" id="boite9" alt="Boîte" width="50" onclick="ouvertureBoite9()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp9" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para9"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 10</h6>
+                        <img src="../img/boite.png" id="boite10" alt="Boîte" width="50" onclick="ouvertureBoite10()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp10" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para10"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 11</h6>
+                        <img src="../img/boite.png" id="boite11" alt="Boîte" width="50" onclick="ouvertureBoite11()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp11" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para11"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 12</h6>
+                        <img src="../img/boite.png" id="boite12" alt="Boîte" width="50" onclick="ouvertureBoite12()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp12" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para12"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 13</h6>
+                        <img src="../img/boite.png" id="boite13" alt="Boîte" width="50" onclick="ouvertureBoite13()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp13" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para13"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 14</h6>
+                        <img src="../img/boite.png" id="boite14" alt="Boîte" width="50" onclick="ouvertureBoite14()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp14" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para14"></p>
+                    </div>
+                </div>
+                <div class="game-content-row">
+                    <div class="row-boite">
+                        <h6>Boîte 15</h6>
+                        <img src="../img/boite.png" id="boite15" alt="Boîte" width="50" onclick="ouvertureBoite15()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp15" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para15"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 16</h6>
+                        <img src="../img/boite.png" id="boite16" alt="Boîte" width="50" onclick="ouvertureBoite16()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp16" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para16"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 17</h6>
+                        <img src="../img/boite.png" id="boite17" alt="Boîte" width="50" onclick="ouvertureBoite17()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp17" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para17"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 18</h6>
+                        <img src="../img/boite.png" id="boite18" alt="Boîte" width="50" onclick="ouvertureBoite18()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp18" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para18"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 19</h6>
+                        <img src="../img/boite.png" id="boite19" alt="Boîte" width="50" onclick="ouvertureBoite19()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp19" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para19"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 20</h6>
+                        <img src="../img/boite.png" id="boite20" alt="Boîte" width="50" onclick="ouvertureBoite20()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp20" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para20"></p>
+                    </div>
+                    <div class="row-boite">
+                        <h6>Boîte 21</h6>
+                        <img src="../img/boite.png" id="boite21" alt="Boîte" width="50" onclick="ouvertureBoite21()">
+                        <img src="../img/boiteRemp.png" id="boiteRemp21" alt="Boîte ouverte" width="50" style="display: none;">
+                        <p class="para" id="para21"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-footer">
+                Designed by Romain
+            </div>
+        </div>
+
+        <div class="banquier" id="banquier">
+            <div class="banquier-header">
+                <h1>Message du banquier</h1>
+            </div>
+            <div class="banquier-content">
+                <div class="moyenneBanquier">
+                    <p id="moyenneBanquier"></p>
+                </div>
+                <div class="actionsBanquier">
+                    <button type="button" id="bouttonBanquier" onclick="accepterMoyenne()">Accepter</button>
+                    <button type="button" id="bouttonBanquier1" onclick="refuserMoyenne()">Refuser</button>
+                </div>
+                <div class="echangeBanquier">
+                    <h4>ou d'échanger votre boîte avec une autre encore non ouverte</h4>
+                    <h6>Les codes sont de "b1" pour la boîte 1 à "b21" pour la boîte21. Si les codes ne sont pas respectés, il ne se passera rien !</h6>
+                </div>
+                <div class="zoneEchange">
+                    <input id="numero" type="text" placeholder="Entre un numéro de boite">
+                    <button id="bouttonNumero" onclick="changerBoite()">Valider</button>
+                    <p id="errorBoite"></p>
+                </div>
+            </div>
+            <div class="banquier-footer">
+                Designed by Romain
+            </div>
+        </div>
+
+        <div class="victoire" id="victoire">
+            <div class="victoire-header">
+                <h1 id="gagner"></h1>
+            </div>
+            <div class="victoire-content">
+                <button type="submit" onclick="rejouer()">Rejouer</button>
+            </div>
+            <div class="victoire-footer">
+                Designed by Romain
             </div>
         </div>
 
 
-<div class="container">
-    <div class="row"
-        <div id="boiteDuJoueur" style="display: none;">
-            <h1>Votre boîte</h1>
-            <img id="boiteAleatoireDuJoueur" src="boite.png">
-            <h2>Voici toutes les autres boites</h2>
-            <h4>Cliquez sur celles ci pour les ouvrir</h4>
-
-
-             <!-- Boite 1 -->
-            <img id="boite1" src="boite.png" onclick="ouvertureBoite1()">
-            <img id="boiteRemp1" src="boiteRemp.png" style="display: none;">
-            <p id="para1"></p>
-
-
-            <!-- Boite 2 -->
-            <img id="boite2" src="boite.png" onclick="ouvertureBoite2()">
-            <img id="boiteRemp2" src="boiteRemp.png" style="display: none;">
-            <p id="para2"></p>
-
-
-            <!-- Boite 3 -->
-            <img id="boite3" src="boite.png" onclick="ouvertureBoite3()">
-            <img id="boiteRemp3" src="boiteRemp.png" style="display: none;">
-            <p id="para3"></p>
-
-
-            <!-- Boite 4 -->
-            <img id="boite4" src="boite.png" onclick="ouvertureBoite4()">
-            <img id="boiteRemp4" src="boiteRemp.png" style="display: none;">
-            <p id="para4"></p>
-
-
-            <!-- Boite 5 -->
-            <img id="boite5" src="boite.png" onclick="ouvertureBoite5()">
-            <img id="boiteRemp5" src="boiteRemp.png" style="display: none;">
-            <p id="para5"></p>
-
-
-            <!-- Boite 6 -->
-            <img id="boite6" src="boite.png" onclick="ouvertureBoite6()">
-            <img id="boiteRemp6" src="boiteRemp.png" style="display: none;">
-            <p id="para6"></p>
-
-
-            <!-- Boite 7 -->
-            <img id="boite7" src="boite.png" onclick="ouvertureBoite7()">
-            <img id="boiteRemp7" src="boiteRemp.png" style="display: none;">
-            <p id="para7"></p>
-
-
-            <!-- Boite 8 -->
-            <img id="boite8" src="boite.png" onclick="ouvertureBoite8()">
-            <img id="boiteRemp8" src="boiteRemp.png" style="display: none;">
-            <p id="para8"></p>
-
-
-            <!-- Boite 9 -->
-            <img id="boite9" src="boite.png" onclick="ouvertureBoite9()">
-            <img id="boiteRemp9" src="boiteRemp.png" style="display: none;">
-            <p id="para9"></p>
-
-
-            <!-- Boite 10 -->
-            <img id="boite10" src="boite.png" onclick="ouvertureBoite10()">
-            <img id="boiteRemp10" src="boiteRemp.png" style="display: none;">
-            <p id="para10"></p>
-
-            <img id="boite11" src="boite.png" onclick="ouvertureBoite11()">
-            <img id="boiteRemp11" src="boiteRemp.png" style="display: none;">
-            <p id="para11"></p>
-
-
-            <!-- Boite 12 -->
-            <img id="boite12" src="boite.png" onclick="ouvertureBoite12()">
-            <img id="boiteRemp12" src="boiteRemp.png" style="display: none;">
-            <p id="para12"></p>
-
-
-            <!-- Boite 13 -->
-            <img id="boite13" src="boite.png" onclick="ouvertureBoite13()">
-            <img id="boiteRemp13" src="boiteRemp.png" style="display: none;">
-            <p id="para13"></p>
-
-
-            <!-- Boite 14 -->
-            <img id="boite14" src="boite.png" onclick="ouvertureBoite14()">
-            <img id="boiteRemp14" src="boiteRemp.png" style="display: none;">
-            <p id="para14"></p>
-
-
-            <!-- Boite 15 -->
-            <img id="boite15" src="boite.png" onclick="ouvertureBoite15()">
-            <img id="boiteRemp15" src="boiteRemp.png" style="display: none;">
-            <p id="para15"></p>
-
-
-            <!-- Boite 16 -->
-            <img id="boite16" src="boite.png" onclick="ouvertureBoite16()">
-            <img id="boiteRemp16" src="boiteRemp.png" style="display: none;">
-            <p id="para16"></p>
-
-
-            <!-- Boite 17 -->
-            <img id="boite17" src="boite.png" onclick="ouvertureBoite17()">
-            <img id="boiteRemp17" src="boiteRemp.png" style="display: none;">
-            <p id="para17"></p>
-
-
-            <!-- Boite 18 -->
-            <img id="boite18" src="boite.png" onclick="ouvertureBoite18()">
-            <img id="boiteRemp18" src="boiteRemp.png" style="display: none;">
-            <p id="para18"></p>
-
-
-            <!-- Boite 19 -->
-            <img id="boite19" src="boite.png" onclick="ouvertureBoite19()">
-            <img id="boiteRemp19" src="boiteRemp.png" style="display: none;">
-            <p id="para19"></p>
-
-
-            <!-- Boite 20 -->
-            <img id="boite20" src="boite.png" onclick="ouvertureBoite20()">
-            <img id="boiteRemp20" src="boiteRemp.png" style="display: none;">
-            <p id="para20"></p>
-
-
-            <!-- Boite 21 -->
-            <img id="boite21" src="boite.png" onclick="ouvertureBoite21()">
-            <img id="boiteRemp21" src="boiteRemp.png" style="display: none;">
-            <p id="para21"></p>
-        </div>
-</div>
-
-        <div id="banquier" style="display: none;">
-            <h1>Message du banquier</h1>
-            <p id="moyenneBanquier"></p>
-            <button id="bouttonBanquier" onclick="accepterMoyenne()">Accepter</button>
-            <button id="bouttonBanquier1" onclick="refuserMoyenne()">Refuser</button>
-            <h3>ou d'échanger votre boîte avec une autre encore non ouverte</h3>
-            <h6>Les codes sont de "b1" pour la boîte 1 à "b21" pour la boîte21. Si les codes ne sont pas respectés, il ne se passera rien !</h6>
-            <input id="numero" type="text" placeholder="Entre un numéro de boite">
-            <button id="bouttonNumero" onclick="changerBoite()">Valider</button>
-            <p id="errorBoite"></p>
-        </div>
-
-        <div id="victoire" style="display: none;">
-            <h1 id="gagner"></h1>
-            <button type="submit" onclick="rejouer()">Rejouer</button>
-        </div>
 
 
 
 
 
-        <script src="scripts.js"></script>
+
+
+
+
+
+        <script src="../js/scripts.js"></script>
     </body>
 </html>

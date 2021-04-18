@@ -1,4 +1,332 @@
-body
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .startGame{
+    width: 50%;
+    height: 40%;
+    background-color: #fff;
+    border: 2px solid #111;
+    border-radius: 20px;
+    padding: 20px 50px;
+}
+body .startGame .startGame-header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body .startGame .startGame-header h1{
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+body .startGame .startGame-content{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body .startGame .startGame-content input{
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    background-color: whitesmoke;
+    margin-bottom: 15px;
+}
+body .startGame .startGame-content button{
+    border: none;
+    background: rgb(110, 182, 110);
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    transition: 0.5s ease background;
+}
+body .startGame .startGame-content button:hover{
+    background: rgb(91, 148, 91);
+}
+body .startGame .startGame-footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(17, 17, 17, 0.7);
+    font-size: 13px;
+}
+body .startGame .startGame-footer p{
+    margin-bottom: 0;
+}
+
+
+body .game{
+    width: 60%;
+    height: 85%;
+    background-color: #fff;
+    border: 2px solid #111;
+    border-radius: 20px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+body .game .game-header{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    border-radius: 10px;
+}
+body .game .game-content{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+body .game .game-content .game-content-row{
+    width: 100%;
+    height: 33%;
+    display: flex;
+}
+body .game .game-content .game-content-row .row-boite{
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body .game .game-content .game-content-row .row-boite img{
+    cursor: pointer;
+}
+body .game .game-content .game-content-row .row-boite p{
+    margin-bottom: 0;
+    font-size: 13px;
+}
+body .game .game-footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(17, 17, 17, 0.7);
+    font-size: 13px;
+}
+body .game .game-footer p{
+    margin-bottom: 0;
+}
+
+
+body .banquier{
+    width: 60%;
+    height: 60%;
+    padding: 20px 40px;
+    background-color: #fff;
+    border: 2px solid #111;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+body .banquier .banquier-header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body .banquier .banquier-header h1{
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+body .banquier .banquier-content{
+    width: 100%;
+    height: 80%;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body .banquier .banquier-content .moyenneBanquier{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+body .banquier .banquier-content .actionsBanquier{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body .banquier .banquier-content .actionsBanquier button{
+    margin: 0 10px;
+    width: 25%;
+    height: 75%;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.5s ease background;
+    outline: none;
+}
+body .banquier .banquier-content .actionsBanquier button:nth-child(1){
+    background: rgb(110, 182, 110);
+}
+body .banquier .banquier-content .actionsBanquier button:nth-child(1):hover{
+    background: rgb(91, 148, 91);
+}
+body .banquier .banquier-content .actionsBanquier button:nth-child(2){
+    background: rgb(255, 99, 99);
+}
+body .banquier .banquier-content .actionsBanquier button:nth-child(2):hover{
+    background: rgb(236, 65, 80);
+}
+body .banquier .banquier-content .echangeBanquier{
+    width: 100%;
+    height: 30%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+body .banquier .banquier-content .echangeBanquier h4, body .banquier .banquier-content .echangeBanquier h6{
+    margin-bottom: 0;
+    font-weight: 500;
+}
+body .banquier .banquier-content .zoneEchange{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body .banquier .banquier-content .zoneEchange input{
+    margin: 15px 0 10px 0;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    background-color: whitesmoke;
+}
+body .banquier .banquier-content .zoneEchange button{
+    border: none;
+    background: rgb(110, 182, 110);
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    transition: 0.5s ease background;
+}
+body .banquier .banquier-content .zoneEchange button:hover{
+    background: rgb(91, 148, 91);
+}
+
+body .banquier .banquier-footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(17, 17, 17, 0.7);
+    font-size: 13px;
+}
+body .banquier .banquier-footer p{
+    margin-bottom: 0;
+}
+
+
+body .victoire{
+    width: 40%;
+    height: 50%;
+    background-color: #fff;
+    border: 2px solid #111;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    display: none;
+}
+body .victoire .victoire-header{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body .victoire .victoire-header h1{
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+body .victoire .victoire-content{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body .victoire .victoire-content button{
+    width: 35%;
+    border: none;
+    background: rgb(110, 182, 110);
+    padding: 10px;
+    border-radius: 20px;
+    color: #fff;
+    outline: none;
+    transition: 0.5s ease background;
+}
+body .victoire .victoire-content button:hover{
+    background: rgb(91, 148, 91);
+}
+body .victoire .victoire-footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(17, 17, 17, 0.7);
+    font-size: 13px;
+}
+body .victoire .victoire-footer p{
+    margin-bottom: 0;
+    
+}
+
+/* body
 {
     margin: 0;
     padding: 0;
@@ -278,4 +606,4 @@ body
 {
     font-size: 10pt;
     margin-top: -15px;
-}
+} */

@@ -66,21 +66,17 @@ function demarrageJeu()
     var prenom2 = document.getElementById("prenom").value.length;
     if(prenom2 <= 2)
     {
-        document.getElementById("prblmPrenom").style.display = "block";
         document.getElementById("prenom").style.borderColor = "red";
-        document.getElementById("prblmPrenom").innerHTML = "Tu ne peux pas continuer avec un prénom si court !";
     }
     else if(prenom2 >= 10)
     {
-        document.getElementById("prblmPrenom").style.display = "block";
         document.getElementById("prenom").style.borderColor = "red";
-        document.getElementById("prblmPrenom").innerHTML = "Tu ne peux pas continuer avec un prénom si long !";
     }
     else
     {
-        alert("Salut " + prenom + " ! La partie débute.")
-        document.getElementById("commencerPartie").style.display = "none";
-        document.getElementById("boiteDuJoueur").style.display = "block";
+        alert("Salut " + prenom + " ! La partie débute.");
+        document.getElementById("startGame").style.display = "none";
+        document.getElementById("game").style.display = "flex";
     }
 }
 
@@ -92,11 +88,12 @@ var compteur = 0;
 var compteurBoitesOuvertes = 1;
 var dejaOuvertB1, dejaOuvertB2, dejaOuvertB3, dejaOuvertB4, dejaOuvertB5, dejaOuvertB6, dejaOuvertB7, dejaOuvertB8, dejaOuvertB9, dejaOuvertB10, dejaOuvertB11, dejaOuvertB12, dejaOuvertB13, dejaOuvertB14, dejaOuvertB15, dejaOuvertB16, dejaOuvertB17, dejaOuvertB18, dejaOuvertB19, dejaOuvertB20, dejaOuvertB21 = false;
 
+
 function ouvertureBoite1()
 {
     document.getElementById("boite1").style.display = "none";
     document.getElementById("boiteRemp1").style.display = "block";
-    document.getElementById("para1").innerHTML = "La somme de cette boîte est : " + boite1;
+    document.getElementById("para1").innerHTML = boite1 + "€";
     dejaOuvertB1 = true;
     compteur += 1;
     compteurBoitesOuvertes += 1;
@@ -110,7 +107,7 @@ function ouvertureBoite2()
 {
     document.getElementById("boite2").style.display = "none";
     document.getElementById("boiteRemp2").style.display = "block";
-    document.getElementById("para2").innerHTML = "La somme de cette boîte est : " + boite2;
+    document.getElementById("para2").innerHTML = boite2 + "€";
     compteur += 1;
     dejaOuvertB2 = true;
     compteurBoitesOuvertes += 1;
@@ -124,7 +121,7 @@ function ouvertureBoite3()
 {
     document.getElementById("boite3").style.display = "none";
     document.getElementById("boiteRemp3").style.display = "block";
-    document.getElementById("para3").innerHTML = "La somme de cette boîte est : " + boite3;
+    document.getElementById("para3").innerHTML = boite3 + "€";
     compteur += 1;
     dejaOuvertB3 = true;
     compteurBoitesOuvertes += 1;
@@ -138,7 +135,7 @@ function ouvertureBoite4()
 {
     document.getElementById("boite4").style.display = "none";
     document.getElementById("boiteRemp4").style.display = "block";
-    document.getElementById("para4").innerHTML = "La somme de cette boîte est : " + boite4;
+    document.getElementById("para4").innerHTML = boite4 + "€";
     compteur += 1;
     dejaOuvertB4 = true;
     compteurBoitesOuvertes += 1;
@@ -152,7 +149,7 @@ function ouvertureBoite5()
 {
     document.getElementById("boite5").style.display = "none";
     document.getElementById("boiteRemp5").style.display = "block";
-    document.getElementById("para5").innerHTML = "La somme de cette boîte est : " + boite5;
+    document.getElementById("para5").innerHTML = boite5 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB5 = true;
@@ -165,7 +162,7 @@ function ouvertureBoite6()
 {
     document.getElementById("boite6").style.display = "none";
     document.getElementById("boiteRemp6").style.display = "block";
-    document.getElementById("para6").innerHTML = "La somme de cette boîte est : " + boite6;
+    document.getElementById("para6").innerHTML = boite6 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB6 = true;
@@ -178,7 +175,7 @@ function ouvertureBoite7()
 {
     document.getElementById("boite7").style.display = "none";
     document.getElementById("boiteRemp7").style.display = "block";
-    document.getElementById("para7").innerHTML = "La somme de cette boîte est : " + boite7;
+    document.getElementById("para7").innerHTML = boite7 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB7 = true;
@@ -191,7 +188,7 @@ function ouvertureBoite8()
 {
     document.getElementById("boite8").style.display = "none";
     document.getElementById("boiteRemp8").style.display = "block";
-    document.getElementById("para8").innerHTML = "La somme de cette boîte est : " + boite8;
+    document.getElementById("para8").innerHTML = boite8 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB8 = true;
@@ -204,7 +201,7 @@ function ouvertureBoite9()
 {
     document.getElementById("boite9").style.display = "none";
     document.getElementById("boiteRemp9").style.display = "block";
-    document.getElementById("para9").innerHTML = "La somme de cette boîte est : " + boite9;
+    document.getElementById("para9").innerHTML = boite9 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB9 = true;
@@ -217,7 +214,7 @@ function ouvertureBoite10()
 {
     document.getElementById("boite10").style.display = "none";
     document.getElementById("boiteRemp10").style.display = "block";
-    document.getElementById("para10").innerHTML = "La somme de cette boîte est : " + boite10;
+    document.getElementById("para10").innerHTML = boite10 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB10 = true;
@@ -230,7 +227,7 @@ function ouvertureBoite11()
 {
     document.getElementById("boite11").style.display = "none";
     document.getElementById("boiteRemp11").style.display = "block";
-    document.getElementById("para11").innerHTML = "La somme de cette boîte est : " + boite11;
+    document.getElementById("para11").innerHTML = boite11 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB11 = true;
@@ -243,7 +240,7 @@ function ouvertureBoite12()
 {
     document.getElementById("boite12").style.display = "none";
     document.getElementById("boiteRemp12").style.display = "block";
-    document.getElementById("para12").innerHTML = "La somme de cette boîte est : " + boite12;
+    document.getElementById("para12").innerHTML = boite12 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB12 = true;
@@ -256,7 +253,7 @@ function ouvertureBoite13()
 {
     document.getElementById("boite13").style.display = "none";
     document.getElementById("boiteRemp13").style.display = "block";
-    document.getElementById("para13").innerHTML = "La somme de cette boîte est : " + boite13;
+    document.getElementById("para13").innerHTML = boite13 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB13 = true;
@@ -269,7 +266,7 @@ function ouvertureBoite14()
 {
     document.getElementById("boite14").style.display = "none";
     document.getElementById("boiteRemp14").style.display = "block";
-    document.getElementById("para14").innerHTML = "La somme de cette boîte est : " + boite14;
+    document.getElementById("para14").innerHTML = boite14 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB14 = true;
@@ -282,7 +279,7 @@ function ouvertureBoite15()
 {
     document.getElementById("boite15").style.display = "none";
     document.getElementById("boiteRemp15").style.display = "block";
-    document.getElementById("para15").innerHTML = "La somme de cette boîte est : " + boite15;
+    document.getElementById("para15").innerHTML = boite15 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB15 = true;
@@ -295,7 +292,7 @@ function ouvertureBoite16()
 {
     document.getElementById("boite16").style.display = "none";
     document.getElementById("boiteRemp16").style.display = "block";
-    document.getElementById("para16").innerHTML = "La somme de cette boîte est : " + boite16;
+    document.getElementById("para16").innerHTML = boite16 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB16 = true;
@@ -308,7 +305,7 @@ function ouvertureBoite17()
 {
     document.getElementById("boite17").style.display = "none";
     document.getElementById("boiteRemp17").style.display = "block";
-    document.getElementById("para17").innerHTML = "La somme de cette boîte est : " + boite17;
+    document.getElementById("para17").innerHTML = boite17 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB17 = true;
@@ -321,7 +318,7 @@ function ouvertureBoite18()
 {
     document.getElementById("boite18").style.display = "none";
     document.getElementById("boiteRemp18").style.display = "block";
-    document.getElementById("para18").innerHTML = "La somme de cette boîte est : " + boite18;
+    document.getElementById("para18").innerHTML = boite18 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB18 = true;
@@ -334,7 +331,7 @@ function ouvertureBoite19()
 {
     document.getElementById("boite19").style.display = "none";
     document.getElementById("boiteRemp19").style.display = "block";
-    document.getElementById("para19").innerHTML = "La somme de cette boîte est : " + boite19;
+    document.getElementById("para19").innerHTML = boite19 + "€";
     compteur += 1;
     compteurBoitesOuvertes += 1;
     dejaOuvertB19 = true;
@@ -347,7 +344,7 @@ function ouvertureBoite20()
 {
     document.getElementById("boite20").style.display = "none";
     document.getElementById("boiteRemp20").style.display = "block";
-    document.getElementById("para20").innerHTML = "La somme de cette boîte est : " + boite20;
+    document.getElementById("para20").innerHTML = boite20 + "€";
     dejaOuvertB20 = true;
     compteur += 1;
     compteurBoitesOuvertes += 1;
@@ -360,7 +357,7 @@ function ouvertureBoite21()
 {
     document.getElementById("boite21").style.display = "none";
     document.getElementById("boiteRemp21").style.display = "block";
-    document.getElementById("para21").innerHTML = "La somme de cette boîte est : " + boite21;
+    document.getElementById("para21").innerHTML = boite21 + "€";
     compteur += 1;
     dejaOuvertB21 = true;
     compteurBoitesOuvertes += 1;
@@ -390,11 +387,11 @@ function moyenneBoitesEncoreFermees()
 {
     for(i = 0; i<tableauBoitesDejaOuvertes.length; i++)
     {
-        document.getElementById("moyenneBanquier").innerHTML = "Le banquier vous propose de gagner maintenant : " + moyenne + " euros !";
+        document.getElementById("moyenneBanquier").innerHTML = "Partir maintenant avec : " + Math.round(moyenne*100)/100 + "€";
         moyenne = ((boite1 + boite2 + boite3 + boite4 + boite5 + boite6 + boite7 + boite8 + boite9 + boite10 + boite11 + boite12 + boite13 + boite14 + boite15 +  boite16 + boite17 + boite18 + boite19 + boite20 + boite21) - tableauBoitesDejaOuvertes[i]) / sommes.length - compteurBoitesOuvertes;
         if(compteur % 2 == 0)
         {
-            document.getElementById("boiteDuJoueur").style.display = "none";
+            document.getElementById("game").style.display = "none";
             document.getElementById("banquier").style.display = "block";
         }
     }
@@ -406,15 +403,15 @@ var moyenne;
 function accepterMoyenne()
 {
     document.getElementById("victoire").style.display = "block";
-    document.getElementById("boiteDuJoueur").style.display = "none";
+    document.getElementById("game").style.display = "none";
     document.getElementById("banquier").style.display = "none";
-    document.getElementById("gagner").innerHTML = "Vous venez d'accepter l'offre du banquier et gagner : " + moyenne + " euros !";
+    document.getElementById("gagner").innerHTML = "Vous remportez : " + Math.round(moyenne*100)/100 + "€ !";
 }
 
 function refuserMoyenne()
 {
     document.getElementById("banquier").style.display = "none";
-    document.getElementById("boiteDuJoueur").style.display = "block";
+    document.getElementById("game").style.display = "block";
 }
 
 function changerBoite()
@@ -433,7 +430,7 @@ function changerBoite()
             boite1 = boiteDuJoueur;
             boiteDuJoueur = boiteStock1;
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -452,7 +449,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock2;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -471,7 +468,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock3;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -490,7 +487,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock4;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -509,7 +506,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock5;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -528,7 +525,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock6;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -547,7 +544,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock7;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -566,7 +563,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock8;
             console.log(boiteDuJouur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -585,7 +582,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock9;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -604,7 +601,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock10;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -623,7 +620,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock11;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -642,7 +639,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock12;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -661,7 +658,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock13;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -680,7 +677,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock14;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -699,7 +696,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock15;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -718,7 +715,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock16;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -737,7 +734,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock17;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -756,7 +753,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock18;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -775,7 +772,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock19;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -794,7 +791,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock20;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 
@@ -813,7 +810,7 @@ function changerBoite()
             boiteDuJoueur = boiteStock21;
             console.log(boiteDuJoueur);
             document.getElementById("banquier").style.display = "none";
-            document.getElementById("boiteDuJoueur").style.display = "block";
+            document.getElementById("game").style.display = "block";
         }
     }
 }
