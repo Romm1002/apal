@@ -1,0 +1,281 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+#commencerPartie
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 800px;
+    height: 200px;
+    background: grey;
+    overflow: auto;
+}
+#commencerPartie p[id = "commencerPartiePara1"]
+{
+    font-size: 20pt;
+    font-weight: bold;
+}
+#commencerPartie p[id = "commencerPartiePara2"]
+{
+    font-weight: bold;
+    font-size: 11pt;
+}
+#commencerPartie p[id = "prblmPrenom"]
+{
+    font-size: 10pt;
+    margin-top: -7px;
+}
+#commencerPartie input[type = "text"]
+{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    padding: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#commencerPartie input[type = "text"]:focus
+{
+    border-color: rgb(196, 108, 1);
+}
+#commencerPartie button
+{
+    width: 100px;
+    padding: 2px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+#commencerPartie button:hover
+{
+    color: rgb(196, 108, 1);
+}
+
+#boiteDuJoueur
+{
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 5px;
+    background: grey;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 350px;
+    margin-right: 350px;
+    display: inline;
+}
+#boiteDuJoueur img
+{
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid black;
+    background: white;
+    padding: 5px;
+}
+#boiteDuJoueur h1
+{
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-right: 300px;
+    margin-left: 300px;
+    color: white;
+    background: black;
+    padding: 5px;
+}
+#boiteDuJoueur h2
+{
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-right: 200px;
+    margin-left: 200px;
+    color: white;
+    background: black;
+    padding: 5px;
+}
+#boiteDuJoueur h4
+{
+    text-decoration: underline;
+}
+#boiteDuJoueur img[id = "boiteRemp1"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp2"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp3"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp4"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp5"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp6"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp7"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp8"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp9"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp10"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp11"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp12"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp13"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp14"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp15"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp16"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp17"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp18"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp19"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp20"]
+{
+    margin-left: 46%;
+}
+#boiteDuJoueur img[id = "boiteRemp21"]
+{
+    margin-left: 46%;
+}
+
+#banquier
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 800px;
+    height: 300px;
+    background: grey;
+    overflow: auto; 
+}
+
+#banquier button
+{
+    width: 100px;
+    padding: 2px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+#banquier button:hover
+{
+    color: rgb(196, 108, 1);
+}
+
+#banquier input[type = "text"]
+{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    padding: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#banquier input[type = "text"]:focus
+{
+    border-color: rgb(196, 108, 1);
+}
+
+#victoire
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 4px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 800px;
+    height: 150px;
+    background: grey;
+    overflow: auto;
+}
+#victoire button
+{
+    width: 100px;
+    padding: 2px;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+
+#victoire button:hover
+{
+    color: rgb(196, 108, 1);
+}
+
+#errorBoite
+{
+    font-size: 10pt;
+    margin-top: -15px;
+}
